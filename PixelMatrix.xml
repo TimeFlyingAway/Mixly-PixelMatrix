@@ -1,0 +1,728 @@
+﻿<!--
+type="company"
+block="block/PixelMatrix.js"
+generator="generator/PixelMatrix.js"
+language="language/"
+examples="examples/PixelMatrix"
+media="media/PixelMatrix"
+pin="companypin/PixelMatrix"
+lib="libraries"
+hardware="hardware/arduino"
+-->
+<!--
+Author: github.com/TimeFlyingAway
+Date: 2024-04-12 00:22:38
+E-mail:
+-->
+<!-- 载入语言文件 -->
+<script type="text/javascript" src="./language/zh-hans.js"></script>
+<script type="text/javascript" src="./language/zh-hant.js"></script>
+<script type="text/javascript" src="./language/en.js"></script>
+<script type="text/javascript" src="./block/PixelMatrix.js"></script>
+<script type="text/javascript" src="./generator/PixelMatrix.js"></script>
+<category name="PixelMatrix点阵" colour="120" >
+  <category id="PixelMatrix_ONE" name="基础块" colour="120">
+    <block type="PixelMatrix_README" name="PixelMatrix声明"></block>
+    <block type="PixelMatrix_INIT">
+      <value name="PixelMatrix_INIT_PIN">
+        <shadow type="pins_digital">
+          <field name="PIN">2</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_INIT_L">
+        <shadow type="math_number">
+          <field name="NUM">32</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_INIT_H">
+        <shadow type="math_number">
+          <field name="NUM">8</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_INIT_DS">
+        <shadow type="math_number">
+          <field name="NUM">256</field>
+        </shadow>
+      </value>
+      <field name="PixelMatrix_INIT_DIR">NEO_MATRIX_PROGRESSIVE</field>
+      <field name="PixelMatrix_CH_ORDER">RGB</field>
+    </block>
+    <block type="PixelMatrix_INIT2">
+      <value name="PixelMatrix_INIT_PIN">
+        <shadow type="pins_digital">
+          <field name="PIN">2</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_INIT_L">
+        <shadow type="math_number">
+          <field name="NUM">8</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_INIT_H">
+        <shadow type="math_number">
+          <field name="NUM">8</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_INIT_TilesX">
+        <shadow type="math_number">
+          <field name="NUM">2</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_INIT_TilesY">
+        <shadow type="math_number">
+          <field name="NUM">3</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_INIT_DS">
+        <shadow type="math_number">
+          <field name="NUM">384</field>
+        </shadow>
+      </value>
+      <field name="PixelMatrix_INIT_DIR">NEO_MATRIX_PROGRESSIVE</field>
+      <field name="PixelMatrix_CH_ORDER">RGB</field>
+    </block>
+    <block type="PixelMatrix_CLEAR">
+    </block>
+    <block type="PixelMatrix_SZLD">
+      <value name="PixelMatrix_SZLD_LD">
+        <shadow type="math_number">
+          <field name="NUM">20</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="PixelMatrix_YS">
+      <value name="PixelMatrix_YS_R">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_YS_G">
+        <shadow type="math_number">
+          <field name="NUM">200</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_YS_B">
+        <shadow type="math_number">
+          <field name="NUM">160</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="TFT_color_seclet">
+      <field name="COLOR">#cc33cc</field>
+    </block>
+    <block type="PixelMatrix_ZTYS">
+      <value name="PixelMatrix_ZTYS_SZ">
+        <block type="PixelMatrix_YS">
+          <value name="PixelMatrix_YS_R">
+            <shadow type="math_number">
+              <field name="NUM">0</field>
+            </shadow>
+          </value>
+          <value name="PixelMatrix_YS_G">
+            <shadow type="math_number">
+              <field name="NUM">200</field>
+            </shadow>
+          </value>
+          <value name="PixelMatrix_YS_B">
+            <shadow type="math_number">
+              <field name="NUM">160</field>
+            </shadow>
+          </value>
+        </block>
+      </value>
+    </block>
+    <block type="PixelMatrix_ZTYS">
+      <value name="PixelMatrix_ZTYS_SZ">
+        <shadow type="factory_block_return_with_textarea">
+          <field name="VALUE">0x22ff</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="PixelMatrix_ZTYS">
+      <value name="PixelMatrix_ZTYS_SZ">
+        <shadow type="factory_block_return_with_textarea">
+          <field name="VALUE">0x22ff</field>
+        </shadow>
+        <shadow type="TFT_color_seclet">
+          <field name="COLOR">#cc33cc</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="PixelMatrix_FILL">
+      <value name="PixelMatrix_FILL_YS">
+        <block type="PixelMatrix_YS">
+          <value name="PixelMatrix_YS_R">
+            <shadow type="math_number">
+              <field name="NUM">80</field>
+            </shadow>
+          </value>
+          <value name="PixelMatrix_YS_G">
+            <shadow type="math_number">
+              <field name="NUM">200</field>
+            </shadow>
+          </value>
+          <value name="PixelMatrix_YS_B">
+            <shadow type="math_number">
+              <field name="NUM">80</field>
+            </shadow>
+          </value>
+        </block>
+      </value>
+    </block>
+    <block type="PixelMatrix_FILL">
+      <value name="PixelMatrix_FILL_YS">
+        <shadow type="factory_block_return_with_textarea">
+          <field name="VALUE">0x07E0</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="PixelMatrix_FILL">
+      <value name="PixelMatrix_FILL_YS">
+        <shadow type="factory_block_return_with_textarea">
+          <field name="VALUE">0x07E0</field>
+        </shadow>
+        <shadow type="TFT_color_seclet">
+          <field name="COLOR">#cc33cc</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="PixelMatrix_XSWB">
+      <value name="PixelMatrix_XSWB_X">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_XSWB_Y">
+        <shadow type="math_number">
+          <field name="NUM">5</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_XSWB_NR">
+        <shadow type="text">
+          <field name="TEXT">hello</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="PixelMatrix_SX">
+</block>
+    <block type="PixelMatrix_HUADIAN">
+      <value name="PixelMatrix_HUADIAN_X">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_HUADIAN_Y">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_HUADIAN_YS">
+        <block type="PixelMatrix_YS">
+          <value name="PixelMatrix_YS_R">
+            <shadow type="math_number">
+              <field name="NUM">0</field>
+            </shadow>
+          </value>
+          <value name="PixelMatrix_YS_G">
+            <shadow type="math_number">
+              <field name="NUM">200</field>
+            </shadow>
+          </value>
+          <value name="PixelMatrix_YS_B">
+            <shadow type="math_number">
+              <field name="NUM">160</field>
+            </shadow>
+          </value>
+        </block>
+      </value>
+    </block>
+    <block type="PixelMatrix_HUADIAN">
+      <value name="PixelMatrix_HUADIAN_X">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_HUADIAN_Y">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_HUADIAN_YS">
+        <shadow type="factory_block_return_with_textarea">
+          <field name="VALUE">0x22ff</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="PixelMatrix_HUADIAN">
+      <value name="PixelMatrix_HUADIAN_X">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_HUADIAN_Y">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_HUADIAN_YS">
+        <shadow type="TFT_color_seclet">
+          <field name="COLOR">#cc33cc</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="PixelMatrix_HUACX">
+      <field name="PixelMatrix_HUACX_LX">drawFastVLine</field>
+      <value name="PixelMatrix_HUACX_X">
+        <shadow type="math_number">
+          <field name="NUM">15</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_HUACX_Y">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_HUACX_CD">
+        <shadow type="math_number">
+          <field name="NUM">8</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_HUACX_YS">
+        <block type="PixelMatrix_YS">
+          <value name="PixelMatrix_YS_R">
+            <shadow type="math_number">
+              <field name="NUM">0</field>
+            </shadow>
+          </value>
+          <value name="PixelMatrix_YS_G">
+            <shadow type="math_number">
+              <field name="NUM">200</field>
+            </shadow>
+          </value>
+          <value name="PixelMatrix_YS_B">
+            <shadow type="math_number">
+              <field name="NUM">160</field>
+            </shadow>
+          </value>
+        </block>
+      </value>
+    </block>
+    <block type="PixelMatrix_HUACX">
+      <field name="PixelMatrix_HUACX_LX">drawFastVLine</field>
+      <value name="PixelMatrix_HUACX_X">
+        <shadow type="math_number">
+          <field name="NUM">15</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_HUACX_Y">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_HUACX_CD">
+        <shadow type="math_number">
+          <field name="NUM">8</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_HUACX_YS">
+        <shadow type="factory_block_return_with_textarea">
+          <field name="VALUE">0x22ff</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="PixelMatrix_HUACX">
+      <field name="PixelMatrix_HUACX_LX">drawFastVLine</field>
+      <value name="PixelMatrix_HUACX_X">
+        <shadow type="math_number">
+          <field name="NUM">15</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_HUACX_Y">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_HUACX_CD">
+        <shadow type="math_number">
+          <field name="NUM">8</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_HUACX_YS">
+        <shadow type="TFT_color_seclet">
+          <field name="COLOR">#cc33cc</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="PixelMatrix_HUAJX">
+      <field name="PixelMatrix_HUAJX_LX">drawRect</field>
+      <value name="PixelMatrix_HUAJX_X">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_HUAJX_Y">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_HUAJX_K">
+        <shadow type="math_number">
+          <field name="NUM">8</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_HUAJX_G">
+        <shadow type="math_number">
+          <field name="NUM">8</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_HUAJX_YS">
+        <block type="PixelMatrix_YS">
+          <value name="PixelMatrix_YS_R">
+            <shadow type="math_number">
+              <field name="NUM">0</field>
+            </shadow>
+          </value>
+          <value name="PixelMatrix_YS_G">
+            <shadow type="math_number">
+              <field name="NUM">200</field>
+            </shadow>
+          </value>
+          <value name="PixelMatrix_YS_B">
+            <shadow type="math_number">
+              <field name="NUM">160</field>
+            </shadow>
+          </value>
+        </block>
+      </value>
+    </block>
+    <block type="PixelMatrix_HUAJX">
+      <field name="PixelMatrix_HUAJX_LX">drawRect</field>
+      <value name="PixelMatrix_HUAJX_X">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_HUAJX_Y">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_HUAJX_K">
+        <shadow type="math_number">
+          <field name="NUM">8</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_HUAJX_G">
+        <shadow type="math_number">
+          <field name="NUM">8</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_HUAJX_YS">
+        <shadow type="factory_block_return_with_textarea">
+          <field name="VALUE">0x22ff</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="PixelMatrix_HUAJX">
+      <field name="PixelMatrix_HUAJX_LX">drawRect</field>
+      <value name="PixelMatrix_HUAJX_X">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_HUAJX_Y">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_HUAJX_K">
+        <shadow type="math_number">
+          <field name="NUM">8</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_HUAJX_G">
+        <shadow type="math_number">
+          <field name="NUM">8</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_HUAJX_YS">
+        <shadow type="TFT_color_seclet">
+          <field name="COLOR">#cc33cc</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="PixelMatrix_HUAYUAN">
+      <field name="PixelMatrix_HUAYUAN_LX">drawCircle</field>
+      <value name="PixelMatrix_HUAYUAN_X">
+        <shadow type="math_number">
+          <field name="NUM">4</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_HUAYUAN_Y">
+        <shadow type="math_number">
+          <field name="NUM">4</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_HUAYUAN_R">
+        <shadow type="math_number">
+          <field name="NUM">3</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_HUAYUAN_YS">
+        <block type="PixelMatrix_YS">
+          <value name="PixelMatrix_YS_R">
+            <shadow type="math_number">
+              <field name="NUM">0</field>
+            </shadow>
+          </value>
+          <value name="PixelMatrix_YS_G">
+            <shadow type="math_number">
+              <field name="NUM">200</field>
+            </shadow>
+          </value>
+          <value name="PixelMatrix_YS_B">
+            <shadow type="math_number">
+              <field name="NUM">160</field>
+            </shadow>
+          </value>
+        </block>
+      </value>
+    </block>
+    <block type="PixelMatrix_HUAYUAN">
+      <field name="PixelMatrix_HUAYUAN_LX">drawCircle</field>
+      <value name="PixelMatrix_HUAYUAN_X">
+        <shadow type="math_number">
+          <field name="NUM">4</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_HUAYUAN_Y">
+        <shadow type="math_number">
+          <field name="NUM">4</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_HUAYUAN_R">
+        <shadow type="math_number">
+          <field name="NUM">3</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_HUAYUAN_YS">
+        <shadow type="factory_block_return_with_textarea">
+          <field name="VALUE">0x22ff</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="PixelMatrix_HUAYUAN">
+      <field name="PixelMatrix_HUAYUAN_LX">drawCircle</field>
+      <value name="PixelMatrix_HUAYUAN_X">
+        <shadow type="math_number">
+          <field name="NUM">4</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_HUAYUAN_Y">
+        <shadow type="math_number">
+          <field name="NUM">4</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_HUAYUAN_R">
+        <shadow type="math_number">
+          <field name="NUM">3</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_HUAYUAN_YS">
+        <shadow type="TFT_color_seclet">
+          <field name="COLOR">#cc33cc</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="PixelMatrix_MYFONT">
+      <field name="VAR">ziti1</field>
+      <field name="TEXT">0xEF5D, 0xE7FF, 0xE7FF, 0xEF5D, 0xEF5D, 0xE7FF, 0xE7FF, 0xEF5D, 0xE7FF, 0xF803, 0xF803, 0xE7FF, 0xE7FF, 0xF803, 0xF805, 0xE7FF, 0xE7FF, 0xF803, 0xF803, 0xE7FF, 0xE7FF, 0xF805, 0xF808, 0xE7FF, 0xEF5D, 0xE7FF, 0xE7FF, 0xEF5D, 0xF805, 0xE7FF, 0xEF5D, 0xEF5D, 0xEF5D, 0xEF5D, 0xE7FF, 0xF805, 0xE7FF, 0xF801, 0xE7FF, 0xEF5D, 0xEF5D, 0xE7FF, 0xEF5D, 0xE7FF, 0xF801, 0xE7FF, 0xE7FF, 0xF801, 0xE7FF, 0xEF5D, 0xEF5D, 0xEF5D, 0xE7FF, 0xF805, 0xF805, 0xE7FF,</field>
+    </block>
+    <block type="PixelMatrix_XSTP">
+      <value name="PixelMatrix_XSTP_X">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_XSTP_Y">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_XSTP_KD">
+        <shadow type="math_number">
+          <field name="NUM">8</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_XSTP_GD">
+        <shadow type="math_number">
+          <field name="NUM">8</field>
+        </shadow>
+      </value>
+      <value name="PixelMatrix_XSTP_MC">
+        <shadow type="math_number">
+          <field name="NUM">ziti1</field>
+        </shadow>
+      </value>
+    </block>
+  </category>
+  <category id="PixelMatrix_TWO" name="示例" colour="120">
+    <block type="base_setup">
+      <statement name="DO">
+        <block type="factory_notes">
+          <field name="VALUE">显示字符串</field>
+          <next>
+            <block type="PixelMatrix_INIT">
+              <value name="PixelMatrix_INIT_PIN">
+                <shadow type="pins_digital">
+                  <field name="PIN">2</field>
+                </shadow>
+              </value>
+              <value name="PixelMatrix_INIT_L">
+                <shadow type="math_number">
+                  <field name="NUM">32</field>
+                </shadow>
+              </value>
+              <value name="PixelMatrix_INIT_H">
+                <shadow type="math_number">
+                  <field name="NUM">8</field>
+                </shadow>
+              </value>
+              <value name="PixelMatrix_INIT_DS">
+                <shadow type="math_number">
+                  <field name="NUM">256</field>
+                </shadow>
+              </value>
+              <next>
+                <block type="PixelMatrix_SZLD">
+                  <value name="PixelMatrix_SZLD_LD">
+                    <shadow type="math_number">
+                      <field name="NUM">50</field>
+                    </shadow>
+                  </value>
+                  <next>
+                    <block type="PixelMatrix_CLEAR">
+                      <next>
+                        <block type="PixelMatrix_ZTYS">
+                          <value name="PixelMatrix_ZTYS_SZ">
+                            <shadow type="TFT_color_seclet">
+                              <field name="COLOR">#cc33cc</field>
+                            </shadow>
+                          </value>
+                          <next>
+                            <block type="PixelMatrix_XSWB">
+                              <value name="PixelMatrix_XSWB_X">
+                                <shadow type="math_number">
+                                  <field name="NUM">0</field>
+                                </shadow>
+                              </value>
+                              <value name="PixelMatrix_XSWB_Y">
+                                <shadow type="math_number">
+                                  <field name="NUM">5</field>
+                                </shadow>
+                              </value>
+                              <value name="PixelMatrix_XSWB_NR">
+                                <shadow type="text">
+                                  <field name="TEXT">hello</field>
+                                </shadow>
+                              </value>
+                              <next>
+                                <block type="PixelMatrix_SX"></block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+    <block type="base_setup">
+      <statement name="DO">
+        <block type="factory_notes">
+          <field name="VALUE">显示图片</field>
+          <next>
+            <block type="PixelMatrix_MYFONT">
+              <field name="VAR">ziti1</field>
+              <field name="TEXT">0xEF5D, 0xE7FF, 0xE7FF, 0xEF5D, 0xEF5D, 0xE7FF, 0xE7FF, 0xEF5D, 0xE7FF, 0xF803, 0xF803, 0xE7FF, 0xE7FF, 0xF803, 0xF805, 0xE7FF, 0xE7FF, 0xF803, 0xF803, 0xE7FF, 0xE7FF, 0xF805, 0xF808, 0xE7FF, 0xEF5D, 0xE7FF, 0xE7FF, 0xEF5D, 0xF805, 0xE7FF, 0xEF5D, 0xEF5D, 0xEF5D, 0xEF5D, 0xE7FF, 0xF805, 0xE7FF, 0xF801, 0xE7FF, 0xEF5D, 0xEF5D, 0xE7FF, 0xEF5D, 0xE7FF, 0xF801, 0xE7FF, 0xE7FF, 0xF801, 0xE7FF, 0xEF5D, 0xEF5D, 0xEF5D, 0xE7FF, 0xF805, 0xF805, 0xE7FF,</field>
+              <next>
+                <block type="PixelMatrix_INIT">
+                  <value name="PixelMatrix_INIT_PIN">
+                    <shadow type="pins_digital">
+                      <field name="PIN">2</field>
+                    </shadow>
+                  </value>
+                  <value name="PixelMatrix_INIT_L">
+                    <shadow type="math_number">
+                      <field name="NUM">32</field>
+                    </shadow>
+                  </value>
+                  <value name="PixelMatrix_INIT_H">
+                    <shadow type="math_number">
+                      <field name="NUM">8</field>
+                    </shadow>
+                  </value>
+                  <value name="PixelMatrix_INIT_DS">
+                    <shadow type="math_number">
+                      <field name="NUM">256</field>
+                    </shadow>
+                  </value>
+                  <next>
+                    <block type="PixelMatrix_SZLD">
+                      <value name="PixelMatrix_SZLD_LD">
+                        <shadow type="math_number">
+                          <field name="NUM">50</field>
+                        </shadow>
+                      </value>
+                      <next>
+                        <block type="PixelMatrix_CLEAR">
+                          <next>
+                            <block type="PixelMatrix_XSTP">
+                              <value name="PixelMatrix_XSTP_X">
+                                <shadow type="math_number">
+                                  <field name="NUM">0</field>
+                                </shadow>
+                              </value>
+                              <value name="PixelMatrix_XSTP_Y">
+                                <shadow type="math_number">
+                                  <field name="NUM">0</field>
+                                </shadow>
+                              </value>
+                              <value name="PixelMatrix_XSTP_KD">
+                                <shadow type="math_number">
+                                  <field name="NUM">8</field>
+                                </shadow>
+                              </value>
+                              <value name="PixelMatrix_XSTP_GD">
+                                <shadow type="math_number">
+                                  <field name="NUM">8</field>
+                                </shadow>
+                              </value>
+                              <value name="PixelMatrix_XSTP_MC">
+                                <shadow type="math_number">
+                                  <field name="NUM">ziti1</field>
+                                </shadow>
+                              </value>
+                              <next>
+                                <block type="PixelMatrix_SX"></block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </statement>
+    </block>
+  </category>
+</category>
